@@ -12,10 +12,10 @@ class ForbesIE(InfoExtractor):
         'url': 'https://www.forbes.com/video/5118388570001',
         'md5': '7',
         'info_dict': {
-            'id': '42',
+            'id': '5118388570001',
             'ext': 'mp4',
-            'title': 'Video title goes here',
-            'thumbnail': r're:^https?://.*\.jpg$',
+            'title': 'Forbes CMO Interview: Kia\u2019s Michael Sprague',
+            'description': 'COO and marketing chief talks Hamsters, Soul and why TV advertising still scores big for the brand.',
             # TODO more properties, either as:
             # * A value
             # * MD5 checksum; start the string with md5:
