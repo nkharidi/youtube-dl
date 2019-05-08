@@ -1,13 +1,14 @@
 from __future__ import unicode_literals
 
+from .common import InfoExtractor
 import re
 
-from .common import InfoExtractor
 from ..utils import (
     determine_ext,
     int_or_none,
     js_to_json,
     unescapeHTML,
+    unified_strdate,
 )
 
 
@@ -47,6 +48,8 @@ class StitcherIE(InfoExtractor):
         'only_matching': True,
     }]
 
+
+
     def _real_extract(self, url):
         mobj = re.match(self._VALID_URL, url)
         audio_id = mobj.group('id')
@@ -60,15 +63,16 @@ class StitcherIE(InfoExtractor):
             display_id)['config']['episode']
 
         title = unescapeHTML(episode['title'])
+
         formats = [{
             'url': episode[episode_key],
             'ext': determine_ext(episode[episode_key]) or 'mp3',
             'vcodec': 'none',
         } for episode_key in ('episodeURL',) if episode.get(episode_key)]
-        description = self._search_regex(
-            r'Episode Info:\s*</span>([^<]+)<', webpage, 'description', fatal=False)
+        description = self._search_regex(r'Episode Info:\s*</span>([^<]+)<', webpage, 'description', fatal=False)
         duration = int_or_none(episode.get('duration'))
         thumbnail = episode.get('episodeImage')
+        upload_date = unified_strdate(episode.get('pubDate'))
 
         return {
             'id': audio_id,
@@ -78,4 +82,5 @@ class StitcherIE(InfoExtractor):
             'duration': duration,
             'thumbnail': thumbnail,
             'formats': formats,
+            'upload_date': upload_date,
         }

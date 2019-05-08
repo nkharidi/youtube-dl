@@ -368,6 +368,7 @@ from .flickr import FlickrIE
 from .flipagram import FlipagramIE
 from .folketinget import FolketingetIE
 from .footyroom import FootyRoomIE
+from.forbes import ForbesIE
 from .formula1 import Formula1IE
 from .fourtube import (
     FourTubeIE,
@@ -650,6 +651,7 @@ from .microsoftvirtualacademy import (
     MicrosoftVirtualAcademyIE,
     MicrosoftVirtualAcademyCourseIE,
 )
+from .minds import MindsIE
 from .minhateca import MinhatecaIE
 from .ministrygrid import MinistryGridIE
 from .minoto import MinotoIE
