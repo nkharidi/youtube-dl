@@ -743,6 +743,8 @@ from .nextmedia import (
     AppleDailyIE,
     NextTVIE,
 )
+from .newsweek import NewsweekIE
+
 from .nexx import (
     NexxIE,
     NexxEmbedIE,
