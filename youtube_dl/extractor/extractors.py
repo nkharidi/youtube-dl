@@ -619,6 +619,7 @@ from .mailru import (
 )
 from .makertv import MakerTVIE
 from .malltv import MallTVIE
+from .mirror import MirrorIE
 from .mangomolo import (
     MangomoloVideoIE,
     MangomoloLiveIE,
