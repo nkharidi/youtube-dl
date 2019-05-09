@@ -5,7 +5,7 @@ from .common import InfoExtractor
 
 
 class MindsIE(InfoExtractor):
-    _VALID_URL = r'https?://(?:www\.)?minds\.com/'
+    _VALID_URL = r'https?://(?:www\.)?minds\.com/(?!newsfeed)'
     _TEST = {
         'url': 'https://www.minds.com/archive/view/715172106794442752',
         'md5': '496d4295d0e90ed27f05b222b2f7089e',
