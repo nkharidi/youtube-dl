@@ -493,6 +493,7 @@ from .ina import InaIE
 from .inc import IncIE
 from .indavideo import IndavideoEmbedIE
 from .infoq import InfoQIE
+from .infowars import InfowarsIE
 from .instagram import (
     InstagramIE,
     InstagramUserIE,
@@ -619,7 +620,7 @@ from .mailru import (
 )
 from .makertv import MakerTVIE
 from .malltv import MallTVIE
-from .mirror import MirrorIE
+from .manchestereveningnews import ManchesterEveningNewsIE
 from .mangomolo import (
     MangomoloVideoIE,
     MangomoloLiveIE,
@@ -657,6 +658,7 @@ from .minhateca import MinhatecaIE
 from .ministrygrid import MinistryGridIE
 from .minoto import MinotoIE
 from .miomio import MioMioIE
+from .mirror import MirrorIE
 from .mit import TechTVMITIE, MITIE, OCWMITIE
 from .mitele import MiTeleIE
 from .mixcloud import (
